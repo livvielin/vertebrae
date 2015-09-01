@@ -1,8 +1,8 @@
 <html>
   <head>
-    <script src="../lib/jquery/dist/jquery.js"></script>
-    <script src="../lib/underscore/underscore.js"></script>
-    <script src="../lib/backbone/backbone.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
   </head>
   <body>
   <script>
@@ -54,7 +54,7 @@ myTweet.set('message', 'Hello, world!');
 /* Using the reference, get the message attribute of the model and display it:
  * http://backbonejs.org/#Model-get */
 
-// window.alert(YOUR CODE HERE);
+window.alert(myTweet.get('message'));
 
 /* - Backbone EVENTS ----------------------------------------------------------
  * Backbone gives us the ability to listen for events on our models,
@@ -83,7 +83,7 @@ myTweet.on('change',
     console.log(e);
 
     // Write code to log the changed attribute:
-// window.alert(YOUR CODE HERE);
+  window.alert(Object.keys(e.changed));
   }
 );
 
@@ -96,7 +96,7 @@ myTweet.on('change',
  * by the framework. Review these now (at http://backbonejs.org/#Model-set)
  * and write a one-liner that will make our `change` listener fire: */
 
-// myTweetYOUR CODE HERE;
+myTweet.set('message', 'This works!');
 
 /* Once you have the `change` event firing, move on to rendering! */
   </script>
